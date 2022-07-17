@@ -16,10 +16,10 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to my API" });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-const db = require("./database/index.js");
+const db = require("./app/database/index");
 db.sequelize.sync({ force: true });

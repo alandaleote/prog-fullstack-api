@@ -11,7 +11,7 @@ const db = {};
 
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.client = require("./client.models.js")(sequelize, Sequelize);
-db.book = require("./book.models.js")(sequelize, Sequelize);
+db.client = require("../models/client.models")(sequelize, Sequelize);
+db.book = require("../models/book.models.js")(sequelize, Sequelize);
 
 module.exports = db;
