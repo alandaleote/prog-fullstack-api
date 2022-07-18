@@ -16,10 +16,13 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to my API" });
 });
 
+require('./app/routes/client.routes.js')(app);
+require('./app/routes/book.routes.js')(app);
+
 const PORT = 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
 const db = require("./app/database/index");
-db.sequelize.sync({ force: true });
+db.sequelize.sync();

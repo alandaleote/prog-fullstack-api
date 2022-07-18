@@ -11,7 +11,7 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         phone: {
-            type: Sequelize.STRING(11),
+            type: Sequelize.STRING,
             allowNull: false
         }
     })

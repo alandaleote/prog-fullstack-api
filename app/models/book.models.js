@@ -1,10 +1,15 @@
 module.exports = (sequelize, Sequelize) => {
   const Book = sequelize.define('Book', {
-    isbn: {
+    id: {
       type: Sequelize.INTEGER,
-      autoIncrement: false,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true
+    },
+    isbn: {
+      type: Sequelize.STRING,
+      autoIncrement: false,
+      allowNull: false,
     },
     name: {
       type: Sequelize.STRING,
@@ -19,12 +24,12 @@ module.exports = (sequelize, Sequelize) => {
       allowNull: false
     },
     year: {
-      type: Sequelize.DATEONLY,
+      type: Sequelize.INTEGER,
       allowNull: false
     },
-    avalible: {
+    avaliable: {
       type: Sequelize.BOOLEAN,
-      allowNull: false,
+      defaultValue: true
     }
   })
 
